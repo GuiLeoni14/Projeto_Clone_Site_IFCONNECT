@@ -1,0 +1,30 @@
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9rem;
+    display: flex;
+    background-color: white;
+    z-index: 20000;
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            img{
+            max-width: 18rem;
+            }
+        }
+        .header-items{
+            padding: 0rem 2rem;
+            a{
+                font-size: 1.5rem;
+                margin-right: 3rem;
+                &:not(:first-child){
+                    @include style-btn(3.5rem, $btn-background, white, #000, white);
+                }
+            }
+        }
+    }
+}

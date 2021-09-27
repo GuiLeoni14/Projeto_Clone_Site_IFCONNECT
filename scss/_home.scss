@@ -1,0 +1,214 @@
+.s-main{
+    margin-top: 8rem;
+    height: 70rem;
+    box-shadow: inset 0 0 0 10000px rgba(28, 57, 61, 0.6);
+    background-image: url("../img/background.jpg");
+    @include flex(row, center, center);
+    .container{
+        @include flex(column, center, center);
+        .main{
+            width: 100%;
+            max-width: 35rem;
+            text-align: center;
+            @include flex(column, center, center);
+            span, p{
+                font-size: 1.5rem;
+                line-height: 170%;
+                color: $gray-03;
+            }
+            p{
+                max-width: 50rem;
+            }
+            h3{
+                font-family: 'Quattrocento', serif;
+                font-size: 2.5rem;
+                color: $gray-03;
+            }
+            .border{
+                font-family: sans-serif;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}
+
+.s-search{
+    .container{
+        @include flex(column, center, space-between);
+        .search-main{
+            position: absolute;
+            width: 100%;
+            top: 70rem;
+            @include flex(row, center, center);
+            flex-wrap: wrap;
+            gap: 4rem;
+            .text{
+                @include flex(column, flex-start, center);
+                width: 46%;
+                height: 40rem;
+                padding: 4rem;
+                a{
+                    font-size: 2.5rem;
+                    font-family: 'Quattrocento', serif;
+                }
+                span{
+                    margin: 4rem 0;
+                    font-size: 1.3rem;
+                }
+                p{
+                    font-size: 1.368rem;
+                    line-height: 170%;
+                }
+            }
+            .text:first-child{
+                background-color: $gray-03;
+            }
+            .text:last-child{
+                background-color: $gray-02;
+            }
+        }
+        .search{
+            margin-top: 39rem;
+            width: 100%;
+            @include flex(row, flex-start, center);
+            input{
+                width: 100%;
+                padding: 1.6rem 1.5rem;
+                background-color: $gray-02;
+            }
+            .image{
+                background-color: $gray-02;
+                img{
+                    height: 2rem;
+                    width: 2rem;
+                }
+            }
+        }
+    }
+}
+
+.s-narrativas{
+    margin-top: 10rem;
+    .container{
+        .elements{
+            @include flex(row, center, space-between);
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .item{
+                @include flex(column, flex-start, space-between);
+                width: 31%;
+                background-color: $gray-03;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                .item-text{
+                    padding: 2rem;
+                    a{
+                        &:not(:last-child){
+                            font-size: 2.5rem;
+                            font-family: 'Quattrocento', serif;
+                        }
+                    }
+                    a:last-child{
+                        @include style-btn(3.5rem, $btn-background, white, #000, white);
+                        font-size: 1.7rem;
+                    }
+                    p{
+                        margin: 2.5rem 0rem;
+                        font-size: 1.5rem;
+                        line-height: 170%;
+                    }
+                }
+            }
+        }
+        .second-elements{
+            @include flex(row, center, space-between);
+            margin-top: 15rem;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 2rem;
+            .second-items{
+                background-color: $gray-03;
+                width: 48%;
+                img{
+                    width: 100%;
+                }
+                .second-items-text{
+                    @include flex(column, center, space-between);
+                    padding: 2rem;
+                    a{
+                        &:not(:last-child){
+                            font-size: 2.5rem;
+                            font-family: 'Quattrocento', serif;
+                        }
+                    }
+                    a:last-child{
+                        @include style-btn(3.5rem, $btn-background, white, #000, white);
+                        font-size: 1.7rem;
+                    }
+                    p{
+                        margin: 2.5rem 0rem;
+                        font-size: 1.5rem;
+                        line-height: 170%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    width: 100%;
+    margin-top: 10rem;
+    background-color: $gray-04;
+    .container{
+        .footer-main{
+            padding: 7rem 0rem;
+            @include flex(row, flex-start, flex-start);
+            .footer-item{
+                max-width: 24.7rem;
+                margin: 0rem 3rem;
+                @include flex(column, flex-start, flex-start);
+                h2{
+                    font-size: 2.1rem;
+                }
+                p{
+                    font-weight: 400;
+                    margin-top: 2.1rem;
+                    line-height: 170%;
+                    font-size: 1.5rem;
+                }
+                ul li{
+                    margin-bottom: 1rem;
+                    line-height: 120%;
+                    font-size: 1.5rem;
+                    a{
+                        @include flex(row, center, flex-start);
+                        img{
+                            margin-right: 1rem;
+                            width: 2.6rem;
+                            height: 2.6rem;
+                        }
+                    }
+                }
+                ul li:nth-child(1){
+                    margin-top: 2.1rem;
+                }
+            }
+        }
+    }
+    .end-footer{
+        background-color: $gray-05;
+        .footer-end-main{
+            padding: 3.9rem 2rem;
+            @include flex(row, flex-start, space-between);
+            h3{
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

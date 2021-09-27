@@ -1,0 +1,22 @@
+@mixin style-btn($height, $bg, $colorText, $bgHover, $colorTextHover){
+    display: inline-block;
+    height: $height;
+    font-size: 1.53rem;
+    padding: 1rem 3rem;
+    line-height: 1.5rem;
+    background-color: $bg;
+    color: $colorText;
+    border-radius: 5rem;
+    transition: all 0.5s;
+    &:hover{
+        background-color: $bgHover;
+        color: $colorTextHover;
+    }
+}
+
+@mixin flex($direction, $align, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;
+}
